@@ -1,5 +1,5 @@
 
-cd backend;
+cd {{ cookiecutter.project_slug }};
 docker-compose -f local.yml up
 sudo docker-compose -f local.yml down; sudo docker-compose -f local.yml up --build
 sudo docker-compose -f local.yml logs; sudo docker-compose -f local.yml ps
