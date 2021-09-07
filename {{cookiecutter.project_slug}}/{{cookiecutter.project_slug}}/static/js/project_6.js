@@ -93,7 +93,7 @@ const debounce = (fn, delay = 1200) => {
 
 
 $(document).ready(function(){
-if ( page_title_one == 'contact-me' ) {
+if ( page_title_one == 'contact-us' ) {
 
 
   $("#employment_switch").click(function(){
