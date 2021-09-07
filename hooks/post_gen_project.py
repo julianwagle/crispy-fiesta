@@ -159,8 +159,6 @@ def main():
     if "{{ cookiecutter.ci_tool }}".lower() != "github":
         shutil.rmtree(".github")
 
-    print('5')
-
     print(SUCCESS + "Project initialized, keep up the good work!" + TERMINATOR)
 
 
