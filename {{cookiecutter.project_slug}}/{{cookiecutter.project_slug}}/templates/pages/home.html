@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %} 
+
+    <!-- WELCOME
+    ================================================== -->
+    <section class="py-8 py-md-11 border-bottom">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-8 text-center">
+
+            <!-- Heading -->
+            <h1 class="display-1 font-weight-bold" data-aos="fade-up" data-aos-delay="50">
+             Qui tetigerit hominis hujus uxorem
+            </h1>
+
+            <!-- Text -->
+            <p class="lead text-muted mb-6" data-aos="fade-up" data-aos-delay="100">
+              <strong><u>Defecit gaudium:</u></strong>Missis itaque David nuntiis, tulit eam quae cum ingressa esset ad illum, dormivit cum ea. 
+              <br/>
+              <strong><u>Nonnulli autem:</u></strong> Egredimini de medio ejus, populus meus, ut salvet unusquisque animam suam ab ira furoris Domini
+            </p>
+
+            <!-- Button -->
+            <p class="mb-7 mb-md-9" data-aos="fade-up" data-aos-delay="150">
+              <a class="btn btn-primary shadow lift" href="{% url 'list' %}">
+                At ille
+                <i class="fas fa-arrow-right ml-3"></i>
+              </a>
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+
+      </div> <!-- / .container -->
+    </section>
+
+
+
+{% endblock content %}

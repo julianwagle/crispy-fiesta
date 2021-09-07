@@ -1,0 +1,43 @@
+
+{% load static %}
+
+ 
+    <!-- CTA
+    ================================================== -->
+    <section class="bg-light">
+      <div class="container py-6 py-md-8 border-top border-gray-300">
+        <div class="row align-items-center">
+          <div class="col-12 col-md">
+
+            <!-- Heading -->
+            <h3 class="font-weight-bold mb-1">
+              In quamcumque autem civitatem aut 
+            </h3>
+
+            <!-- Text -->
+            <p class="font-size-lg text-muted mb-5 mb-md-0">
+              castellum intraveritis, interrogate, quis in ea
+            </p>
+
+          </div>
+
+
+          <div class="col-12 col-md-auto">
+            <form method="post">
+              {% csrf_token %}
+              <!-- Button -->
+              <a href="{% url 'contact-me' %}" class="btn btn-primary mr-1 lift">
+                juxta eum
+              </a>
+              <button type="submit" class="btn btn-secondary lift">
+                Zachur filius
+              </button>
+            </form>
+          </div>
+
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+
+                    
+    </section>
+

@@ -1,0 +1,205 @@
+{% raw %}{% load static i18n {% endraw %}compress{% raw %}%}<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="br">
+    <title>{% block title %}{% endraw %}{{ cookiecutter.project_name }}{% raw %}{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- FavIcon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'images/favicons/apple-icon-57x57.png' %}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'images/favicons/apple-icon-60x60.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'images/favicons/apple-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'images/favicons/apple-icon-76x76.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'images/favicons/apple-icon-114x114.png' %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'images/favicons/apple-icon-120x120.png' %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'images/favicons/apple-icon-144x144.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'images/favicons/apple-icon-152x152.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicons/apple-icon-180x180.png' %}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{% static 'images/favicons/android-icon-192x192.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicons/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'images/favicons/favicon-96x96.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicons/favicon-16x16.png' %}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png' %}">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Canonical SEO -->
+    <link rel="canonical" href="https://www.{% endraw %}{{ cookiecutter.domain_name }}{% raw %}"/>
+    <meta name="description" content="{% endraw %}{{ cookiecutter.description }}{% raw %}">
+    <meta name="keywords" content=" ... ">
+    <meta name="author" content="{% endraw %}{{ cookiecutter.author_name }}{% raw %}">
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="{% endraw %}{{ cookiecutter.project_name }}{% raw %}">
+    <meta itemprop="description" content="{% endraw %}{{ cookiecutter.description }}{% raw %}">
+    <meta itemprop="image" content="{% static 'images/main.png' %}">
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="{% endraw %}{{ cookiecutter.project_name }}{% raw %}">
+    <meta name="twitter:site" content="@{% endraw %}{{ cookiecutter.domain_name }}{% raw %}">
+    <meta name="twitter:title" content="{% endraw %}{{ cookiecutter.project_name_name }}{% raw %}">
+    <meta name="twitter:description" content="{% endraw %}{{ cookiecutter.description }}{% raw %}">
+    <meta name="twitter:creator" content="@{% endraw %}{{ cookiecutter.domain_name }}{% raw %}">
+    <meta name="twitter:image" content="{% static 'images/main.png' %}">
+    <meta name="twitter:image:alt" content=" ... ">
+    <meta name="twitter:data1" content="{% endraw %}{{ cookiecutter.project_name }}{% raw %}">
+    <meta name="twitter:label1" content="{% endraw %}{{ cookiecutter.description }}{% raw %}">
+    <!-- Open Graph data -->
+    <meta property="og:title" content="{% endraw %}{{ cookiecutter.project_name }}{% raw %}" />
+    <meta property="og:type" content="{% endraw %}{{ cookiecutter.description }}{% raw %}" />
+    <meta property="og:url" content="https://www.{% endraw %}{{ cookiecutter.domain_name }}{% raw %}" />
+    <meta property="og:image" content="{% static 'images/main.png' %}"/>
+    <meta property="og:description" content="{% endraw %}{{ cookiecutter.description }}{% raw %}" />
+    <meta property="og:site_name" content="{% endraw %}{{ cookiecutter.domain_name }}{% raw %}" />
+
+    <!-- Ahrefs crawl auth -->
+    <meta name="ahrefs-site-verification" content=" ... ">
+
+    <!-- Sooper Dooper Ooper Essential JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'js/Packages/jQuery_351_.js' %}"></script>
+    <script src="{% static 'js/Packages/popper_1143_.js' %}"></script>
+    <script src="{% static 'js/Packages/bootstrap_431_.js' %}"></script>
+
+    {% include 'snippets/filler.html' %} 
+
+
+    {% block css %}
+
+      <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+      <!-- Libs CSS -->
+      <link rel="stylesheet" href="{% static 'project/libs/fancyapps/fancybox/dist/jquery.fancybox.min.css' %}">
+      <link rel="stylesheet" href="{% static 'project/libs/aos/dist/aos.css' %}">
+      <!-- <link rel="stylesheet" href="{% static 'project/libs/choices.js/public/assets/styles/choices.min.css' %}"> -->
+      <link rel="stylesheet" href="{% static 'project/libs/flickity-fade/flickity-fade.css' %}">
+      <link rel="stylesheet" href="{% static 'project/libs/flickity/dist/flickity.min.css' %}">
+      <!-- <link rel="stylesheet" href="{% static 'project/libs/highlightjs/styles/vs2015.css' %}"> -->
+      <link rel="stylesheet" href="{% static 'project/libs/jarallax/dist/jarallax.css' %}">
+      <!-- <link rel="stylesheet" href="{% static 'project/libs/quill/dist/quill.core.css' %}"> -->
+      
+      <!-- Map -->
+      <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css" rel="stylesheet">
+      
+      <!-- Project CSS -->
+      <link rel="stylesheet" href="{% static 'project/css/theme_4.css' %}">
+      <link rel='stylesheet' href="{% static 'css/tags.css' %}">
+      <link rel="stylesheet" href="{% static 'css/confetti.css' %}" />
+      <link rel='stylesheet' href="{% static 'css/project_4.css' %}">
+      <link rel='stylesheet' href="{% static 'leaflet/leaflet.css' %}">
+
+    {% endblock %}
+
+    <!-- Bootstrap JS and its dependencies-->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    
+  </head>
+
+  {% include 'snippets/filler.html' %} 
+
+  {% if messages %}
+  {% for message in messages %}
+      <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+        {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">
+            &times;
+          </span>
+        </button>
+      </div>
+  {% endfor %}
+{% endif %}
+
+  <body class="bg-light">
+
+      <div class="mb-1">
+        {% include 'snippets/project/navbar.html' %} 
+      </div>
+
+      {% include 'snippets/filler.html' %} 
+
+      {% block content %}
+
+      {% endblock content %}
+
+      {% include 'snippets/project/footer.html' %} 
+
+    {% block modal %}
+
+      {% include 'modals/message_mail_sent.html' %}
+      {% include 'modals/message_mail_fail.html' %}
+
+    {% endblock modal %}
+
+    <!-- Le javascript
+    ================================================== -->
+
+    {% block javascript %}
+
+      <script src="{% static 'js/urls.js' %}"></script>
+
+      <script>const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;</script>
+      <script>
+        try{
+            const geojson = JSON.parse("{{geojson|escapejs}}".replace(/'/g, '"'));
+        } catch (e) {
+        }
+      </script>
+
+      <!-- Map -->
+      <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js"></script>
+      <!-- place project specific Javascript in this file -->
+
+        <!-- Libs JS -->
+        <script src="{% static 'project/libs/fancyapps/fancybox/dist/jquery.fancybox.min.js' %}"></script>
+        <script src="{% static 'project/libs/aos/dist/aos.js' %}"></script>
+        <!-- <script src="{% static 'project/libs/choices.js/public/assets/scripts/choices.min.js' %}"></script> -->
+        <script src="{% static 'project/libs/countup.js/dist/countUp.min.js' %}"></script>
+        <!-- <script src="{% static 'project/libs/dropzone/dist/min/dropzone.min.js' %}"></script> -->
+        <script src="{% static 'project/libs/flickity/dist/flickity.pkgd.min.js' %}"></script>
+        <script src="{% static 'project/libs/flickity-fade/flickity-fade.js' %}"></script>
+        <!-- <script src="{% static 'project/libs/highlightjs/highlight.pack.min.js' %}"></script> -->
+        <script src="{% static 'project/libs/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+        <script src="{% static 'project/libs/isotope-layout/dist/isotope.pkgd.min.js' %}"></script>
+        <script src="{% static 'project/libs/jarallax/dist/jarallax.min.js' %}"></script>
+        <!-- <script src="{% static 'project/libs/jarallax/dist/jarallax-video.min.js' %}"></script> -->
+        <!-- <script src="{% static 'project/libs/jarallax/dist/jarallax-element.min.js' %}"></script> -->
+        <!-- <script src="{% static 'project/libs/quill/dist/quill.min.js' %}"></script> -->
+        <!-- <script src="{% static 'project/libs/smooth-scroll/dist/smooth-scroll.min.js' %}"></script> -->
+        <script src="{% static 'project/libs/typed.js/lib/typed.min.js' %}"></script>
+
+        <!-- Project JS -->
+        <script src="{% static 'project/js/polyfills.js' %}"></script>
+        <script src="{% static 'project/js/aos.js' %}"></script>
+        <!-- <script src="{% static 'project/js/choices.js' %}"></script> -->
+        <script src="{% static 'project/js/countup.js' %}"></script>
+        <!-- <script src="{% static 'project/js/dropdown.js' %}"></script> -->
+        <!-- <script src="{% static 'project/js/dropzone.js' %}"></script> -->
+        <script src="{% static 'project/js/fancybox.js' %}"></script>
+        <!-- <script src="{% static 'project/js/highlight.js' %}"></script> -->
+        <script src="{% static 'project/js/isotope.js' %}"></script>
+        <script src="{% static 'project/js/map_5.js' %}"></script>
+        <script src="{% static 'project/js/modal.js' %}"></script>
+        <script src="{% static 'project/js/navbar.js' %}"></script>
+        <!-- <script src="{% static 'project/js/popovers.js' %}"></script> -->
+        <script src="{% static 'project/js/pricing.js' %}"></script>
+        <!-- <script src="{% static 'project/js/quill.js' %}"></script> -->
+        <!-- <script src="{% static 'project/js/smooth-scroll.js' %}"></script> -->
+        <!-- <script src="{% static 'project/js/tooltips.js' %}"></script> -->
+        <script src="{% static 'project/js/typed.js' %}"></script>
+        <!-- endbuild -->
+
+        <script src="{% static 'js/jquery.tagcanvas_1.js' %}"></script>
+        <script defer src="{% static 'js/tags_1.js' %}"></script>
+        <script src="{% static 'js/confetti.js' %}"></script>
+        <script src="{% static 'js/project_6.js' %}"></script>
+        <script src="{% static 'leaflet/leaflet.js' %}"></script>
+
+    {% endblock javascript %}
+
+    {% include 'snippets/filler.html' %} 
+
+
+  </body>
+</html>
+

@@ -1,0 +1,38 @@
+{% load static %}
+
+<div id="modalMailFail" class="modal fade" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="Message Fail Modal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content modal-filled gradient-danger-warning" >
+            <div class="modal-body p-4">
+                <div class="text-center" >
+                    <img src="{% static 'images/robo-email.svg' %}"  id="modal-message-fail" alt="" width="120"/>
+
+                    <h1 class="m-2" class="display-2 font-weight-normal-bold text-white" style="color: #fedb41;">
+                        <strong>
+                            <u>
+                                Message not sent!
+                            </u>
+                        </strong>
+                    </h1>
+
+                    <p class="mt-3" style="color:white"><strong>
+                        The message you attempted to send was deemed a secuirity risk. 
+                        One of four things is likely true.
+                        <ul style="color: white; float: left;"> 
+                            <li style="color: white; float: left;">There was a major technical error on my part.</li>
+                            <li style="color: white; float: left;">You have tried to send too many messages today. </li>
+                            <li style="color: white; float: left;">Your IP address is hidden.</li>
+                            <li style="color: white; float: left;">You are thought to be abusing the anonymity a VPN.</li>
+                        </ul>
+                    </strong></p>
+
+                    <a href="{% url 'home' %}"  class="btn btn-lg btn-outline-danger my-2" data-bs-dismiss="modal"  aria-label="Close">
+                        <strong>Return Home</strong>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
