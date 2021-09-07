@@ -60,7 +60,7 @@ function styles() {
       cssnano({ preset: 'default' })   // minify result
   ]
 
-  return src(`${paths.sass}/project.scss`)
+  return src(`${paths.sass}/project.scss`, {allowEmpty:true})
     .pipe(sass({
       includePaths: [
         paths.bootstrapSass,
@@ -77,7 +77,7 @@ function styles() {
 
 // Javascript minification
 function scripts() {
-  return src(`${paths.js}/project.js`)
+  return src(`${paths.js}/project.js`, {allowEmpty:true})
     .pipe(plumber()) // Checks for errors
     .pipe(uglify()) // Minifies the js
     .pipe(rename({ suffix: '.min' }))
@@ -86,7 +86,7 @@ function scripts() {
 
 // Vendor Javascript minification
 function vendorScripts() {
-  return src(paths.vendorsJs)
+  return src(paths.vendorsJs, {allowEmpty:true})
     .pipe(concat('vendors.js'))
     .pipe(dest(paths.js))
     .pipe(plumber()) // Checks for errors
@@ -97,7 +97,7 @@ function vendorScripts() {
 
 // Image compression
 function imgCompression() {
-  return src(`${paths.images}/*`)
+  return src(`${paths.images}/*`, {allowEmpty:true})
     .pipe(imagemin()) // Compresses PNG, JPEG, GIF and SVG images
     .pipe(dest(paths.images))
 }
