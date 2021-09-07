@@ -78,8 +78,8 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
-    "{{ cookiecutter.project_slug }}drf_auth",
-    "{{ cookiecutter.project_slug }}.drf.registration",
+    "{{ cookiecutter.project_slug }}.drf_auth",
+    "{{ cookiecutter.project_slug }}.drf_auth.registration",
     "{{ cookiecutter.project_slug }}.users.apps.UsersConfig",
     # Your stuff: custom apps go here
 ]
