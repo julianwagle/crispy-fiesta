@@ -1,6 +1,6 @@
 ARG PYTHON_VERSION=3.9-slim-buster
 
-FROM node:10-stretch-slim as client-builder
+FROM node:14 as client-builder
 
 ARG APP_HOME=/app
 WORKDIR ${APP_HOME}
@@ -8,7 +8,7 @@ WORKDIR ${APP_HOME}
 COPY ./package.json ${APP_HOME}
 RUN npm install && npm cache clean --force
 COPY . ${APP_HOME}
-RUN npm run build
+# RUN npm run build
 
 
 # define an alias for the specfic python version used in this file.
