@@ -24,6 +24,11 @@ from {{cookiecutter.project_slug}}.drf_auth.registration.views import (
 urlpatterns = [
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
     path("about/", TemplateView.as_view(template_name="pages/about.html"), name="about"),
+    path("contact-us/", TemplateView.as_view(template_name="pages/contact-us.html"), name="contact-us"),
+    path("terms/", TemplateView.as_view(template_name="pages/terms.html"), name="terms"),
+    path("privacy/", TemplateView.as_view(template_name="pages/privacy.html"), name="privacy"),
+    path("cookies/", TemplateView.as_view(template_name="pages/cookies.html"), name="cookies"),
+
     # Django Admin, use {% raw %}{% url 'admin:index' %}{% endraw %}
     path(settings.ADMIN_URL, admin.site.urls),
     # User management
