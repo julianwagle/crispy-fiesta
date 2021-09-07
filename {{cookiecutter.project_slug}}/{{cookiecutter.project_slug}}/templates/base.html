@@ -1,4 +1,4 @@
-{% raw %}{% load static i18n {% endraw %}compress{% raw %}%}<!DOCTYPE html>
+{% raw %}{% load static i18n compress%}<!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -35,7 +35,7 @@
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="{% endraw %}{{ cookiecutter.project_name }}{% raw %}">
     <meta name="twitter:site" content="@{% endraw %}{{ cookiecutter.domain_name }}{% raw %}">
-    <meta name="twitter:title" content="{% endraw %}{{ cookiecutter.project_name_name }}{% raw %}">
+    <meta name="twitter:title" content="{% endraw %}{{ cookiecutter.project_name }}{% raw %}">
     <meta name="twitter:description" content="{% endraw %}{{ cookiecutter.description }}{% raw %}">
     <meta name="twitter:creator" content="@{% endraw %}{{ cookiecutter.domain_name }}{% raw %}">
     <meta name="twitter:image" content="{% static 'images/main.png' %}">
@@ -145,7 +145,6 @@
         } catch (e) {
         }
       </script>
-
       <!-- Map -->
       <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js"></script>
       <!-- place project specific Javascript in this file -->
@@ -202,4 +201,5 @@
 
   </body>
 </html>
+{% endraw %}
 

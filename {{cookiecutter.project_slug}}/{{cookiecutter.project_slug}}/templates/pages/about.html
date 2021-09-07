@@ -1,3 +1,4 @@
+{% raw %}
 {% extends "base.html" %}
 {% load static %}
 {% block content %} 
@@ -18,7 +19,8 @@
               "Hey",
               "Holler",
               "Hi"
-          ]}'></span>, we're {{cookeicutter.project_name}}
+          ]}'></span>, we're {% endraw %}{{cookiecutter.project_name}}{% raw %}
+
             </h1>
 
 
@@ -213,4 +215,4 @@
 
 
 
-{% endblock content %}
+{% endblock content %}{% endraw %}

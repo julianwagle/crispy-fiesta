@@ -1,3 +1,4 @@
+{% raw %}
 {% load static %}{% load static i18n %}
 
 <!-- NAVBAR
@@ -5,7 +6,8 @@
 
 <nav class=" navbar d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 ">
   <a class="navbar-brand" href="{% url 'home' %}">
-    {{cookiecutter.project_name}}
+    {% endraw %}{{cookiecutter.project_name}}{% raw %}
+
   </a>
   <div class="my-2 my-md-0 mr-md-3  align-items-center">
 
@@ -21,3 +23,4 @@
     <a class="p-2 navbar-link" href="{% url 'contact-me' %}">Contact</a>
 </div>
 </nav>
+{% endraw %}

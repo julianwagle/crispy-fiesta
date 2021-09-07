@@ -54,11 +54,12 @@ def generate_random_string(
     return "".join([random.choice(symbols) for _ in range(length)])
 
 
-def set_flag(file_path, flag, formatted=None, *args, **kwargs):
-    random_string = generate_random_string(*args, **kwargs)
-    if formatted is not None:
-        random_string = formatted.format(random_string)
-    value = random_string
+def set_flag(file_path, flag, formatted=None, value=None, *args, **kwargs):
+    if not value:
+        random_string = generate_random_string(*args, **kwargs)
+        if formatted is not None:
+            random_string = formatted.format(random_string)
+        value = random_string
 
     with open(file_path, "r+") as f:
         file_contents = f.read().replace(flag, value)
@@ -158,6 +159,7 @@ def main():
     if "{{ cookiecutter.ci_tool }}".lower() != "github":
         shutil.rmtree(".github")
 
+    print('5')
 
     print(SUCCESS + "Project initialized, keep up the good work!" + TERMINATOR)
 

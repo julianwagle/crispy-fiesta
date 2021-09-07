@@ -3,7 +3,7 @@
   "project_slug": "{{ cookiecutter.project_name.lower()|replace(' ', '_')|replace('-', '_')|replace('.', '_')|trim() }}",
   "description": "Behold, the magnificent {{ cookiecutter.project_name.upper() }}!!!",
   "domain_name": "{{ cookiecutter.project_slug }}.com",
-  "server_ip_address": "40.114.177.156",
+  "server_ip": "40.114.177.156",
   "author_name": "Anonymous Human",
   "email": "{{ cookiecutter.author_name.lower()|replace(' ', '.') }}@{{ cookiecutter.domain_name }}",
   "timezone": "America/Chicago",
@@ -24,5 +24,8 @@
   ],
   "use_sentry": "n",
   "use_whitenoise": "n",
-  "use_postgis": "y"
+  "use_postgis": "y",
+  "_copy_without_render": [
+    "*.js"
+  ]
 }
